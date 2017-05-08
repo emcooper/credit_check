@@ -24,7 +24,7 @@ class LuhnValidator
   def double_alternating_values
     doubled = []
     separate_digits.each_index do |index|
-      if (separate_digits.length - index).even? #digits.index still is 1 on third pass. why? b/c it finds the index of the first time that value appears, so repeated values will be messed up
+      if (separate_digits.length - index).even? 
         doubled << separate_digits[index] * 2
       else
         doubled << separate_digits[index]
